@@ -13,7 +13,6 @@ function Footer() {
       }}
     >
       <Container maxWidth="lg">
-        {/* بخش بالایی (سه ستون آیکون‌دار) */}
         <Box
           sx={{
             display: "flex",
@@ -75,8 +74,6 @@ function Footer() {
             </Box>
           ))}
         </Box>
-
-        {/* بخش پایین (چهار ستون لینک‌ها و اطلاعات) */}
         <Box
           sx={{
             display: "flex",
@@ -86,7 +83,6 @@ function Footer() {
             textAlign: { xs: "center", md: "right" },
           }}
         >
-          {/* ستون 1 */}
           <Box sx={{ width: { xs: "100%", sm: "45%", md: "20%" }, mb: 4 }}>
             <List>
               <ListItem sx={{ color: "black", fontSize: "20px", fontWeight: 600 }}>
@@ -108,8 +104,6 @@ function Footer() {
               )}
             </List>
           </Box>
-
-          {/* ستون 2 */}
           <Box sx={{ width: { xs: "100%", sm: "45%", md: "20%" }, mb: 4 }}>
             <List>
               <ListItem sx={{ color: "black", fontSize: "20px", fontWeight: 600 }}>
@@ -129,8 +123,6 @@ function Footer() {
               ))}
             </List>
           </Box>
-
-          {/* ستون 3 */}
           <Box sx={{ width: { xs: "100%", sm: "45%", md: "20%" }, mb: 4 }}>
             <List>
               <ListItem sx={{ color: "black", fontSize: "20px", fontWeight: 600 }}>
@@ -167,7 +159,7 @@ function Footer() {
         </Box>
       </Container>
 
-      {/* خط پایانی */}
+      
       <Typography
         sx={{
           color: "gray",
@@ -178,7 +170,7 @@ function Footer() {
         }}
         variant="body2"
       >
-        تمامی حقوق برای این فروشگاه محفوظ است © 2025
+         این سایت توسط عرفان جلیلیان طراحی شده است
       </Typography>
     </Box>
   );

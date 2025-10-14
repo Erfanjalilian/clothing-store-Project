@@ -13,30 +13,72 @@ import SearchIcon from "@mui/icons-material/Search";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (state) => () => setOpen(state);
 
-  const menuItems = [
-    "سوالات متداول",
-    "نحوه ارسال",
-    "نحوه پرداخت",
-    "بازگشت",
-    "ارتباط با ما",
-  ];
-  const categoryItems = [
-    "لباس زنانه",
-    "لباس مردانه",
-    "برندها",
-    "فروش ویژه",
-    "تازه رسیده‌ها",
-  ];
+
+const menuItems=[
+  {
+    id:"1",
+    title:"سوالات متداول",
+    link:"/"
+  },
+  {
+    id:"2",
+    title:"نحوه ی ارسال",
+    link:"/"
+  },
+  {
+    id:"3",
+    title:"نحوه ی پرداخت",
+    link:"/"
+  },
+  {
+    id:"4",
+    title:"بازگشت"
+  },
+  {
+    id:"5",
+    title:"ارتباط با ما",
+    link:"/"
+  }
+]
+
+  const categoryItems=[
+    {
+      id:"1",
+      title:"لباس زنانه",
+      link:"/"
+    },
+    {
+      id:"2",
+      title:"لباس مردانه",
+      link:"/"
+    },
+    {
+      id:"3",
+      title:"برندها",
+      link:"/"
+    },
+    {
+      id:"4",
+      title: "فروش ویژه",
+      link:"/"
+    },
+    {
+      id:"5",
+      title:"تازه رسیده‌ها",
+      link:"/NewArrivals"
+    }
+  ]
 
   return (
     <Box sx={{ bgcolor: "#fff", boxShadow: "0 1px 3px rgba(0,0,0,0.1)" }}>
-      {/* نوار بالایی دسکتاپ */}
+     
       <Box
         sx={{
           display: { xs: "none", md: "flex" },
@@ -53,14 +95,14 @@ function Navbar() {
             key={item}
             sx={{ cursor: "pointer", "&:hover": { color: "black" } }}
           >
-            {item}
+            {item.title}
           </Typography>
         ))}
       </Box>
 
       <Divider sx={{ display: { xs: "none", md: "block" } }} />
 
-      {/* نوار اصلی */}
+      
       <Box
         sx={{
           display: "flex",
@@ -70,7 +112,7 @@ function Navbar() {
           py: 2,
         }}
       >
-        {/* لوگو */}
+        
         <Typography
           variant="h5"
           sx={{
@@ -83,7 +125,7 @@ function Navbar() {
           فشن‌شاپ
         </Typography>
 
-        {/* جستجو دسکتاپ */}
+        
         <Box
           sx={{
             display: { xs: "none", md: "flex" },
@@ -104,7 +146,7 @@ function Navbar() {
           />
         </Box>
 
-        {/* آیکون‌ها */}
+       
         <Box
           sx={{
             display: { xs: "none", md: "flex" },
@@ -120,7 +162,7 @@ function Navbar() {
           </IconButton>
         </Box>
 
-        {/* دکمه همبرگر موبایل */}
+     
         <IconButton
           sx={{ display: { xs: "flex", md: "none" } }}
           onClick={toggleDrawer(true)}
@@ -129,7 +171,7 @@ function Navbar() {
         </IconButton>
       </Box>
 
-      {/* نوار دسته‌بندی دسکتاپ */}
+   
       <Box
         sx={{
           display: { xs: "none", md: "flex" },
@@ -141,6 +183,10 @@ function Navbar() {
         }}
       >
         {categoryItems.map((text) => (
+          <Link style={{
+            color:"black",
+            textDecoration:"none"
+          }} to={text.link}>
           <Typography
             key={text}
             sx={{
@@ -149,12 +195,16 @@ function Navbar() {
               "&:hover": { color: "red", transform: "translateY(-2px)" },
             }}
           >
-            {text}
+            
+                 {text.title}
+           
+            
           </Typography>
+           </Link>
         ))}
       </Box>
 
-      {/* Drawer موبایل */}
+     
       <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
         <Box sx={{ width: 250, p: 2 }}>
           <Typography variant="h6" sx={{ mb: 2 }}>
@@ -163,7 +213,7 @@ function Navbar() {
           <List>
             {menuItems.map((text) => (
               <ListItem button key={text} onClick={toggleDrawer(false)}>
-                {text}
+                {text.title}
               </ListItem>
             ))}
           </List>
@@ -173,7 +223,7 @@ function Navbar() {
           <List>
             {categoryItems.map((text) => (
               <ListItem button key={text} onClick={toggleDrawer(false)}>
-                {text}
+                {text.title}
               </ListItem>
             ))}
           </List>
