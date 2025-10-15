@@ -67,7 +67,7 @@ const menuItems=[
     {
       id:"4",
       title: "فروش ویژه",
-      link:"/"
+      link:"/SpecialSale"
     },
     {
       id:"5",
@@ -96,6 +96,7 @@ const menuItems=[
             sx={{ cursor: "pointer", "&:hover": { color: "black" } }}
           >
             {item.title}
+            
           </Typography>
         ))}
       </Box>
@@ -214,6 +215,7 @@ const menuItems=[
             {menuItems.map((text) => (
               <ListItem button key={text} onClick={toggleDrawer(false)}>
                 {text.title}
+
               </ListItem>
             ))}
           </List>
@@ -223,7 +225,24 @@ const menuItems=[
           <List>
             {categoryItems.map((text) => (
               <ListItem button key={text} onClick={toggleDrawer(false)}>
-                {text.title}
+                     <Link style={{
+            color:"black",
+            textDecoration:"none"
+          }} to={text.link}>
+          <Typography
+            key={text}
+            sx={{
+              cursor: "pointer",
+              transition: "all 0.2s",
+              "&:hover": { color: "red", transform: "translateY(-2px)" },
+            }}
+          >
+            
+                 {text.title}
+           
+            
+          </Typography>
+           </Link>
               </ListItem>
             ))}
           </List>

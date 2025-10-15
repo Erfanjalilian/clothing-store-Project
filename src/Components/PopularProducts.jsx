@@ -56,7 +56,7 @@ function PopularProducts() {
             key={index}
             sx={{
               width: {
-                xs: "48%", // دو محصول در هر ردیف در موبایل
+                xs: "48%",
                 sm: "48%",
                 md: "23%",
                 lg: "19%",

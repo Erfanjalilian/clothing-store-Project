@@ -48,9 +48,9 @@ function NewArrivals() {
                   key={index}
                   sx={{
                     width: {
-                      xs: "48%", // برای موبایل ۲ تا در هر ردیف
+                      xs: "48%",
                       sm: "30%",
-                      md: "18%", // برای دسکتاپ ۵ تا
+                      md: "18%",
                     },
                     mt: 2,
                     borderRadius: "12px",

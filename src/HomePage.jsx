@@ -6,8 +6,9 @@ import PopularProducts from "./Components/PopularProducts"
 function HomePage(){
     return(
         <Box>
+            <Navbar />
             <Container maxWidth='lg'>
-                <Navbar />
+                
                 <Slider />
                 <SeasonalCollections />
                 <PopularProducts />
