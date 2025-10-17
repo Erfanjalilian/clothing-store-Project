@@ -7,74 +7,43 @@ import {
   Drawer,
   Divider,
   InputBase,
+  Container,
+  Collapse,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Brand from "./Brand";
+import MenClothes from "./MenClothes";
+import WomanClothes from "./WomanClothes";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [hoveredMenu, setHoveredMenu] = useState(null);
+  const [openMobileMenu, setOpenMobileMenu] = useState(null);
 
   const toggleDrawer = (state) => () => setOpen(state);
 
+  const menuItems = [
+    { id: "1", title: "سوالات متداول", link: "/" },
+    { id: "2", title: "نحوه ی ارسال", link: "/" },
+    { id: "3", title: "نحوه ی پرداخت", link: "/" },
+    { id: "4", title: "بازگشت", link: "/" },
+    { id: "5", title: "ارتباط با ما", link: "/" },
+  ];
 
-const menuItems=[
-  {
-    id:"1",
-    title:"سوالات متداول",
-    link:"/"
-  },
-  {
-    id:"2",
-    title:"نحوه ی ارسال",
-    link:"/"
-  },
-  {
-    id:"3",
-    title:"نحوه ی پرداخت",
-    link:"/"
-  },
-  {
-    id:"4",
-    title:"بازگشت"
-  },
-  {
-    id:"5",
-    title:"ارتباط با ما",
-    link:"/"
-  }
-]
-
-  const categoryItems=[
-    {
-      id:"1",
-      title:"لباس زنانه",
-      link:"/"
-    },
-    {
-      id:"2",
-      title:"لباس مردانه",
-      link:"/"
-    },
-    {
-      id:"3",
-      title:"برندها",
-      link:"/"
-    },
-    {
-      id:"4",
-      title: "فروش ویژه",
-      link:"/SpecialSale"
-    },
-    {
-      id:"5",
-      title:"تازه رسیده‌ها",
-      link:"/NewArrivals"
-    }
-  ]
+  const categoryItems = [
+    { id: "1", title: "لباس زنانه", key: "women" },
+    { id: "2", title: "لباس مردانه", key: "men" },
+    { id: "3", title: "برندها", key: "brand" },
+    { id: "4", title: "فروش ویژه", link: "/SpecialSale" },
+    { id: "5", title: "تازه رسیده‌ها", link: "/NewArrivals" },
+  ];
 
   return (
     <Box sx={{ bgcolor: "#fff", boxShadow: "0 1px 3px rgba(0,0,0,0.1)" }}>
@@ -92,11 +61,10 @@ const menuItems=[
       >
         {menuItems.map((item) => (
           <Typography
-            key={item}
+            key={item.id}
             sx={{ cursor: "pointer", "&:hover": { color: "black" } }}
           >
             {item.title}
-            
           </Typography>
         ))}
       </Box>
@@ -113,7 +81,6 @@ const menuItems=[
           py: 2,
         }}
       >
-        
         <Typography
           variant="h5"
           sx={{
@@ -126,7 +93,6 @@ const menuItems=[
           فشن‌شاپ
         </Typography>
 
-        
         <Box
           sx={{
             display: { xs: "none", md: "flex" },
@@ -140,14 +106,9 @@ const menuItems=[
           }}
         >
           <SearchIcon sx={{ color: "gray", mr: 1 }} />
-          <InputBase
-            fullWidth
-            placeholder="جست‌وجوی محصول..."
-            sx={{ fontSize: "0.95rem" }}
-          />
+          <InputBase fullWidth placeholder="جست‌وجوی محصول..." />
         </Box>
 
-       
         <Box
           sx={{
             display: { xs: "none", md: "flex" },
@@ -163,7 +124,7 @@ const menuItems=[
           </IconButton>
         </Box>
 
-     
+       
         <IconButton
           sx={{ display: { xs: "flex", md: "none" } }}
           onClick={toggleDrawer(true)}
@@ -172,7 +133,7 @@ const menuItems=[
         </IconButton>
       </Box>
 
-   
+     
       <Box
         sx={{
           display: { xs: "none", md: "flex" },
@@ -181,69 +142,122 @@ const menuItems=[
           bgcolor: "#fafafa",
           py: 1.5,
           borderTop: "1px solid #eee",
+          position: "relative",
         }}
       >
-        {categoryItems.map((text) => (
-          <Link style={{
-            color:"black",
-            textDecoration:"none"
-          }} to={text.link}>
-          <Typography
-            key={text}
-            sx={{
-              cursor: "pointer",
-              transition: "all 0.2s",
-              "&:hover": { color: "red", transform: "translateY(-2px)" },
-            }}
+        {categoryItems.map((item) => (
+          <Box
+            key={item.id}
+            onMouseEnter={() => setHoveredMenu(item.key || null)}
+            onMouseLeave={() => setHoveredMenu(null)}
+            sx={{ position: "relative" }}
           >
             
-                 {text.title}
-           
+            <Link style={{
+              textDecoration:"none",
+              color:"black"
+            }} to={item.link}>
+            <Typography
+              sx={{
+                cursor: "pointer",
+                transition: "all 0.2s",
+                "&:hover": { color: "red", transform: "translateY(-2px)" },
+              }}
+            >
+              {item.title}
+            </Typography>
+            </Link>
+
             
-          </Typography>
-           </Link>
+            {hoveredMenu === "brand" && item.key === "brand" && (
+              <Box sx={{ position: "absolute", top: "100%",width:"200px" }}>
+                <Brand />
+              </Box>
+            )}
+            {hoveredMenu === "women" && item.key === "women" && (
+              <Box sx={{ position: "absolute", top: "100%", width:"200px" }}>
+                <WomanClothes />
+              </Box>
+            )}
+            {hoveredMenu === "men" && item.key === "men" && (
+              <Box sx={{ position: "absolute", top: "100%",width:"200px" }}>
+                <MenClothes />
+              </Box>
+            )}
+          </Box>
         ))}
       </Box>
 
-     
+      
       <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
         <Box sx={{ width: 250, p: 2 }}>
           <Typography variant="h6" sx={{ mb: 2 }}>
             منو
           </Typography>
-          <List>
-            {menuItems.map((text) => (
-              <ListItem button key={text} onClick={toggleDrawer(false)}>
-                {text.title}
 
+        
+          <List>
+            {menuItems.map((item) => (
+              <ListItem key={item.id} onClick={toggleDrawer(false)}>
+                <Link style={{
+                  color:"black",
+                  textDecoration:"none"
+                }} to={item.link}>
+                {item.title}
+                </Link>
               </ListItem>
             ))}
           </List>
+
           <Typography variant="h6" sx={{ mt: 3 }}>
-            دسته‌بندی
+            دسته‌بندی‌ها
           </Typography>
+
+         
           <List>
-            {categoryItems.map((text) => (
-              <ListItem button key={text} onClick={toggleDrawer(false)}>
-                     <Link style={{
-            color:"black",
-            textDecoration:"none"
-          }} to={text.link}>
-          <Typography
-            key={text}
-            sx={{
-              cursor: "pointer",
-              transition: "all 0.2s",
-              "&:hover": { color: "red", transform: "translateY(-2px)" },
-            }}
-          >
-            
-                 {text.title}
-           
-            
-          </Typography>
-           </Link>
-              </ListItem>
+            {categoryItems.map((item) => (
+              <Box key={item.id}>
+                <ListItem
+                  button
+                  onClick={() =>
+                    item.key
+                      ? setOpenMobileMenu(
+                          openMobileMenu === item.key ? null : item.key
+                        )
+                      : null
+                  }
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Link style={{
+                    textDecoration:"none",
+                    color:"black"
+                  }} to={item.link}>
+                  {item.title}
+                  </Link>
+                  {item.key && (
+                    <>
+                      {openMobileMenu === item.key ? (
+                        <ExpandLessIcon />
+                      ) : (
+                        <ExpandMoreIcon />
+                      )}
+                    </>
+                  )}
+                </ListItem>
+
+                <Collapse
+                  in={openMobileMenu === item.key}
+                  timeout="auto"
+                  unmountOnExit
+                >
+                  {item.key === "brand" && <Brand />}
+                  {item.key === "women" && <WomanClothes />}
+                  {item.key === "men" && <MenClothes />}
+                </Collapse>
+              </Box>
             ))}
           </List>
         </Box>

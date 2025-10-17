@@ -7,12 +7,17 @@ function HomePage(){
     return(
         <Box>
             <Navbar />
-            <Container maxWidth='lg'>
+            <Box sx={{
+                width:"90%",
+                height:"auto",
+                marginLeft:"auto",
+                marginRight:"auto"
+            }}>
                 
                 <Slider />
                 <SeasonalCollections />
                 <PopularProducts />
-            </Container>
+            </Box>
         </Box>
     )
 }
