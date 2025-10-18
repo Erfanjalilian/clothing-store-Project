@@ -30,8 +30,8 @@ function Navbar() {
   const toggleDrawer = (state) => () => setOpen(state);
 
   const menuItems = [
-    { id: "1", title: "سوالات متداول", link: "/" },
-    { id: "2", title: "نحوه ی ارسال", link: "/" },
+    { id: "1", title: "سوالات متداول", link: "/FrequentlyAskedQuestions" },
+    { id: "2", title: "نحوه ی ارسال", link: "/HowToSend" },
     { id: "3", title: "نحوه ی پرداخت", link: "/" },
     { id: "4", title: "بازگشت", link: "/" },
     { id: "5", title: "ارتباط با ما", link: "/" },
@@ -60,12 +60,17 @@ function Navbar() {
         }}
       >
         {menuItems.map((item) => (
+          <Link style={{
+            color:"black",
+            textDecoration:"none"
+          }} to={item.link}>
           <Typography
             key={item.id}
             sx={{ cursor: "pointer", "&:hover": { color: "black" } }}
           >
             {item.title}
           </Typography>
+          </Link>
         ))}
       </Box>
 
