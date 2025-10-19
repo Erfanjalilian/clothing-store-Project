@@ -7,6 +7,7 @@ import SpecialSale from './SpecialSale';
 import FrequentlyAskedQuestions from './FrequentlyAskedQuestions'
 import HowToSend from './HowToSend';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import PaymentMethod from './PaymentMethod'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/SpecialSale' element={<SpecialSale />} />
         <Route path='/FrequentlyAskedQuestions' element={<FrequentlyAskedQuestions />} />
         <Route path='/HowToSend' element={<HowToSend />} />
+        <Route path='/PaymentMethod' element={<PaymentMethod />} />
       </Routes>
       </BrowserRouter>
     </Box>

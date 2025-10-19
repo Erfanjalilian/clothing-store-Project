@@ -32,7 +32,7 @@ function Navbar() {
   const menuItems = [
     { id: "1", title: "سوالات متداول", link: "/FrequentlyAskedQuestions" },
     { id: "2", title: "نحوه ی ارسال", link: "/HowToSend" },
-    { id: "3", title: "نحوه ی پرداخت", link: "/" },
+    { id: "3", title: "نحوه ی پرداخت", link: "/PaymentMethod" },
     { id: "4", title: "بازگشت", link: "/" },
     { id: "5", title: "ارتباط با ما", link: "/" },
   ];
