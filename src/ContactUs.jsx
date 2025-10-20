@@ -21,7 +21,9 @@ function ContactUs(){
                     flexWrap:"wrap",
                     justifyContent:{sm:"none",md:"space-between",lg:"space-between"}
                 }}>
-                    <Box width={"40%"}>
+                    <Box sx={{
+                        width:{sm:"100%",md:"40%",lg:"40%"}
+                    }}>
                         <Typography sx={{
                             marginTop:"10px"
                         }} variant="h5">تلفن‌ها</Typography>
@@ -51,7 +53,9 @@ function ContactUs(){
                             marginTop:"10px"
                         }} variant="body1">همه روزه 10:00 صبح تا 9: 00 بعد از ظهر</Typography>
                     </Box>
-                    <Box width={"59%"}>
+                    <Box sx={{
+                        width:{sm:"100%",md:"59%",lg:"59%"}
+                    }}>
                         <Typography sx={{
                             marginTop:"10px"
                         }} variant="h5">خرید آنلاین</Typography>
