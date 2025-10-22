@@ -13,24 +13,25 @@ function Footer() {
       }}
     >
       <Container maxWidth="lg">
+        {/* بخش بالا (آیکون‌ها و توضیحات کوتاه) */}
         <Box
           sx={{
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "space-between",
+            justifyContent: { xs: "center", md: "space-between" },
             textAlign: { xs: "center", md: "right" },
           }}
         >
-          {[ 
+          {[
             {
-              icon: <ChatIcon sx={{ width: 50, height: 50, color: "orangered" }} />,
+              icon: <ChatIcon sx={{ width: { xs: 40, md: 50 }, height: { xs: 40, md: 50 }, color: "orangered" }} />,
               title: "مشاوره خرید",
               text: "تیم مدیران فروش و متخصصان ما خوشحال خواهند شد که به شما در یافتن محصولات و پیشنهادات مناسب کمک کنند",
             },
             {
               icon: (
                 <LocalShippingIcon
-                  sx={{ width: 50, height: 50, color: "orangered" }}
+                  sx={{ width: { xs: 40, md: 50 }, height: { xs: 40, md: 50 }, color: "orangered" }}
                 />
               ),
               title: "حمل و نقل و پرداخت",
@@ -39,7 +40,7 @@ function Footer() {
             {
               icon: (
                 <UnsubscribeIcon
-                  sx={{ width: 50, height: 50, color: "orangered" }}
+                  sx={{ width: { xs: 40, md: 50 }, height: { xs: 40, md: 50 }, color: "orangered" }}
                 />
               ),
               title: "خبرنامه",
@@ -49,22 +50,37 @@ function Footer() {
             <Box
               key={index}
               sx={{
-                width: { xs: "100%", sm: "48%", md: "30%" },
+                width: { xs: "100%", sm: "80%", md: "30%" },
                 mt: { xs: 4, md: 8 },
                 px: { xs: 1, sm: 2 },
+                mx: { xs: "auto", md: 0 },
               }}
             >
-              <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: { xs: "center", md: "flex-start" },
+                  alignItems: "center",
+                }}
+              >
                 {item.icon}
               </Box>
-              <Typography sx={{ color: "gray", mt: 1 }} variant="h6">
+              <Typography
+                sx={{
+                  color: "black",
+                  mt: 1.5,
+                  fontWeight: 600,
+                  fontSize: { xs: "1rem", md: "1.2rem" },
+                }}
+                variant="h6"
+              >
                 {item.title}
               </Typography>
               <Typography
                 sx={{
-                  mt: 1.5,
+                  mt: 1.2,
                   color: "gray",
-                  fontSize: "0.95rem",
+                  fontSize: { xs: "0.85rem", md: "0.95rem" },
                   lineHeight: 1.7,
                 }}
                 variant="body1"
@@ -74,103 +90,90 @@ function Footer() {
             </Box>
           ))}
         </Box>
+
+        {/* بخش لینک‌ها */}
         <Box
           sx={{
             display: "flex",
             flexWrap: "wrap",
             justifyContent: { xs: "center", md: "space-between" },
-            mt: { xs: 6, md: 10 },
+            mt: { xs: 5, md: 10 },
             textAlign: { xs: "center", md: "right" },
           }}
         >
-          <Box sx={{ width: { xs: "100%", sm: "45%", md: "20%" }, mb: 4 }}>
-            <List>
-              <ListItem sx={{ color: "black", fontSize: "20px", fontWeight: 600 }}>
-                کاتالوگ
-              </ListItem>
-              {["لباس زنانه", "لباس مردانه", "برندها", "فروش ویژه", "تازه رسیده‌ها"].map(
-                (item, i) => (
+          {[
+            {
+              title: "کاتالوگ",
+              items: ["لباس زنانه", "لباس مردانه", "برندها", "فروش ویژه", "تازه رسیده‌ها"],
+            },
+            {
+              title: "اطلاعات",
+              items: ["سوالات متداول", "نحوه ارسال", "نحوه پرداخت", "بازگشت"],
+            },
+            {
+              title: "درباره ما",
+              items: ["درباره فروشگاه", "ارتباط با ما", "شرایط استفاده"],
+            },
+            {
+              title: "ارتباط با ما",
+              items: [
+                "تهران، جنب تئاتر پارک وی، نمای کوهستان روبروی بانک کارآفرین ملت",
+                "همه روزه از ساعت ۸ صبح تا ۹ شب",
+                "۰۲۱ - ۷۷۷ ۸۸۸۸",
+              ],
+            },
+          ].map((section, i) => (
+            <Box
+              key={i}
+              sx={{
+                width: { xs: "100%", sm: "45%", md: "22%" },
+                mb: { xs: 3, md: 4 },
+              }}
+            >
+              <List>
+                <ListItem
+                  sx={{
+                    color: "black",
+                    fontSize: { xs: "1.1rem", md: "1.25rem" },
+                    fontWeight: 600,
+                    justifyContent: { xs: "center", md: "flex-start" },
+                  }}
+                >
+                  {section.title}
+                </ListItem>
+                {section.items.map((item, j) => (
                   <ListItem
-                    key={i}
+                    key={j}
                     sx={{
                       color: "gray",
-                      fontSize: "0.95rem",
+                      fontSize: { xs: "0.85rem", md: "0.95rem" },
+                      lineHeight: 1.6,
                       "&:hover": { color: "black" },
+                      justifyContent: { xs: "center", md: "flex-start" },
                     }}
                   >
                     {item}
                   </ListItem>
-                )
-              )}
-            </List>
-          </Box>
-          <Box sx={{ width: { xs: "100%", sm: "45%", md: "20%" }, mb: 4 }}>
-            <List>
-              <ListItem sx={{ color: "black", fontSize: "20px", fontWeight: 600 }}>
-                اطلاعات
-              </ListItem>
-              {["سوالات متداول", "نحوه ارسال", "نحوه پرداخت", "بازگشت"].map((item, i) => (
-                <ListItem
-                  key={i}
-                  sx={{
-                    color: "gray",
-                    fontSize: "0.95rem",
-                    "&:hover": { color: "black" },
-                  }}
-                >
-                  {item}
-                </ListItem>
-              ))}
-            </List>
-          </Box>
-          <Box sx={{ width: { xs: "100%", sm: "45%", md: "20%" }, mb: 4 }}>
-            <List>
-              <ListItem sx={{ color: "black", fontSize: "20px", fontWeight: 600 }}>
-                درباره ما
-              </ListItem>
-              {["درباره فروشگاه", "ارتباط با ما", "شرایط استفاده"].map((item, i) => (
-                <ListItem
-                  key={i}
-                  sx={{
-                    color: "gray",
-                    fontSize: "0.95rem",
-                    "&:hover": { color: "black" },
-                  }}
-                >
-                  {item}
-                </ListItem>
-              ))}
-            </List>
-          </Box>
-
-          {/* ستون 4 */}
-          <Box sx={{ width: { xs: "100%", sm: "45%", md: "20%" }, mb: 4 }}>
-            <List>
-              <ListItem sx={{ color: "black", fontSize: "20px", fontWeight: 600 }}>
-                ارتباط با ما
-              </ListItem>
-              <ListItem sx={{ color: "gray", lineHeight: 1.7 }}>
-                تهران، جنب تئاتر پارک وی، نمای کوهستان روبروی بانک کارآفرین ملت
-              </ListItem>
-              <ListItem sx={{ color: "gray" }}>همه روزه از ساعت ۸ صبح تا ۹ شب</ListItem>
-              <ListItem sx={{ color: "gray", fontWeight: 500 }}>۰۲۱ - ۷۷۷ ۸۸۸۸</ListItem>
-            </List>
-          </Box>
+                ))}
+              </List>
+            </Box>
+          ))}
         </Box>
       </Container>
 
-      
+      {/* کپی‌رایت */}
       <Typography
         sx={{
           color: "gray",
           textAlign: "center",
-          mt: { xs: 4, md: 8 },
+          mt: { xs: 3, md: 6 },
           pb: { xs: 4, md: 6 },
-          fontSize: "0.9rem",
+          fontSize: { xs: "0.8rem", md: "0.9rem" },
+          px: 2,
         }}
         variant="body2"
       >
-         این سایت توسط عرفان جلیلیان طراحی شده است
+        این سایت توسط عرفان جلیلیان طراحی شده است
       </Typography>
     </Box>
   );

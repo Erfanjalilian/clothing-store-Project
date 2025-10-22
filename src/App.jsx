@@ -8,6 +8,8 @@ import FrequentlyAskedQuestions from './FrequentlyAskedQuestions'
 import HowToSend from './HowToSend';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import PaymentMethod from './PaymentMethod'
+import Login from './Login';
+import SignUp from './SignUp';
 import ContactUs from './ContactUs'
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path='/HowToSend' element={<HowToSend />} />
         <Route path='/PaymentMethod' element={<PaymentMethod />} />
         <Route path='/ContactUs' element={<ContactUs />} />
+         <Route path='/Login' element={<Login />} />
+         <Route path='/SignUp' element={<SignUp />} />
       </Routes>
       </BrowserRouter>
     </Box>

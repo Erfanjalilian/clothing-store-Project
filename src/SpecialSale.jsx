@@ -1,90 +1,161 @@
-import { Box,Typography,Container } from "@mui/material";
-import { useEffect,useState } from "react";
+import { Box, Typography, Container } from "@mui/material";
+import { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
-function SpecialSale(){
-    const[data,setData]=useState([])
-    useEffect(()=>{
-        async function fetchData(){
-            const result=await fetch("http://localhost:3000/spacialSale")
-            const mocData=await result.json();
-            setData(mocData)
-        }
-        fetchData()
-    },[])
-    return(
-        <Box>
-            <Navbar />
-            <Container>
-                 <Typography sx={{
-                    color:"gray",
-                    marginTop:"50px",
-                    marginBottom:"20px"
-                 }} variant="body2">خانه/فروش ویژه</Typography>
-                 <Typography variant="h5">فروش ویژه</Typography>
-                 {
-                    data.length==0 || data==null?
-                    <Typography>درحال بارگیری محصولات ....</Typography>:
-                    <Box sx={{
-                        display:"flex",
-                       
-                        flexWrap:"wrap",
-                        gap:2
-                     
-                    }}>
-                        {
-                            data.map((item)=>(
-                                <Box key={item.id} sx={{
-                                    
-                                width: {
-                                    xs: "48%",
-                                    sm: "30%",
-                                    md: "18%",
-                                },
-                                  mt: 2,
-                                   borderRadius: "12px",
-                                  overflow: "hidden",
-                                  boxShadow: "0 0 0 rgba(0,0,0,0)",
-                                  transition: "box-shadow 0.3s ease",
-                                  "&:hover": {
-                                   boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-                                 },
-                        
-                                }}>
-                                    <img style={{
-                                          width: "100%",
-                                           height: "400px",
-                                          objectFit: "cover",
-                                        borderRadius: "12px",
-                                    }} src={item.ProductAddresImage} />
-                                    <Typography sx={{
-                                        color:"gray"
-                                    }} variant="body2">{item.ProductBrand}</Typography>
-                                    <Typography sx={{ color: "gray", mt: 1 }} variant="body2"></Typography>
-                                    <Typography variant="body1">{item.ProductName}</Typography>
-                                    {
-                                        item.discount==""?<Typography>{item.ProductPrice} تومان</Typography>:
-                                        <Box>
-                                            <Typography variant="body1" sx={{
-                                                textDecoration: "line-through",
-                                                display:"inline",
-                                                margin:"5px"
-                                            }}>{item.ProductPrice} تومان</Typography>
-                                            <Typography variant="body1" sx={{
-                                                color:"orange",
-                                                display:"inline"
-                                            }}>{item.discount} تومان</Typography>
-                                        </Box>
-                                    }
-                                    
-                                    
-                                </Box>
-                            ))
-                        }
-                    </Box>
-                 }
-            </Container>
-           
-        </Box>
-    )
+
+function SpecialSale() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await fetch("http://localhost:3000/spacialSale");
+      const mocData = await result.json();
+      setData(mocData);
+    }
+    fetchData();
+  }, []);
+
+  return (
+    <Box sx={{ bgcolor: "#f8f9fa", minHeight: "100vh", direction: "rtl" }}>
+      <Navbar />
+
+      <Container sx={{ py: { xs: 4, md: 6 } }}>
+        <Typography
+          sx={{
+            color: "text.secondary",
+            mb: 1,
+            fontSize: { xs: "0.85rem", sm: "0.9rem" },
+          }}
+          variant="body2"
+        >
+          خانه / فروش ویژه
+        </Typography>
+
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: 600,
+            mb: 3,
+            fontSize: { xs: "1.3rem", sm: "1.6rem" },
+          }}
+        >
+          فروش ویژه
+        </Typography>
+
+        {data.length === 0 || data == null ? (
+          <Typography sx={{ color: "gray", mt: 3 }}>
+            در حال بارگیری محصولات ...
+          </Typography>
+        ) : (
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 3,
+              justifyContent: { xs: "lex-start", sm: "flex-start" },
+            }}
+          >
+            {data.map((item) => (
+              <Box
+                key={item.id}
+                sx={{
+                  width: { xs: "40%", sm: "30%", md: "18%" },
+                  bgcolor: "background.paper",
+                  borderRadius: 3,
+                  p: 2,
+                  boxShadow: "0 0 0 rgba(0,0,0,0)",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
+                    transform: "translateY(-3px)",
+                  },
+                }}
+              >
+                <Box
+                  component="img"
+                  src={item.ProductAddresImage}
+                  alt={item.ProductName}
+                  sx={{
+                    width: "100%",
+                    height: 250,
+                    objectFit: "cover",
+                    borderRadius: 2,
+                    mb: 2,
+                  }}
+                />
+
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "text.secondary",
+                    mb: 0.5,
+                    fontSize: { xs: "0.8rem", sm: "0.85rem" },
+                  }}
+                >
+                  {item.ProductBrand}
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontWeight: 500,
+                    mb: 1,
+                    fontSize: { xs: "0.9rem", sm: "1rem" },
+                  }}
+                >
+                  {item.ProductName}
+                </Typography>
+
+                {item.discount === "" ? (
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#212529",
+                      fontWeight: 600,
+                      mt: 0.5,
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                    }}
+                  >
+                    {item.ProductPrice} تومان
+                  </Typography>
+                ) : (
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      mt: 0.5,
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        textDecoration: "line-through",
+                        color: "gray",
+                        fontSize: { xs: "0.85rem", sm: "0.9rem" },
+                      }}
+                    >
+                      {item.ProductPrice} تومان
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: "orangered",
+                        fontWeight: 600,
+                        fontSize: { xs: "0.9rem", sm: "1rem" },
+                      }}
+                    >
+                      {item.discount} تومان
+                    </Typography>
+                  </Box>
+                )}
+              </Box>
+            ))}
+          </Box>
+        )}
+      </Container>
+    </Box>
+  );
 }
+
 export default SpecialSale;
