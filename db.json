@@ -55,6 +55,12 @@
       "type":"هودی زنانه",
       "popularityScore":22,
       "colorDefult":"قهوه ای روشن",
+      "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ],
       "variants":[
         {
           "color":"قرمز",
@@ -79,7 +85,13 @@
       "discount":"",
       "type":"هودی زنانه",
       "popularityScore":111,
-      "colorDefult":"سیاه"
+      "colorDefult":"سیاه",
+       "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"6",
@@ -92,7 +104,13 @@
       "discount":"",
       "type":"تی شرت",
       "popularityScore":10,
-      "colorDefult":"سیاه"
+      "colorDefult":"سیاه",
+       "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"7",
@@ -105,7 +123,13 @@
       "discount":"",
       "type":"تی شرت",
       "popularityScore":13,
-      "colorDefult":"سفید"
+      "colorDefult":"سفید",
+       "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"8",
@@ -118,7 +142,13 @@
       "discount":"",
       "type":"تی شرت",
       "popularityScore":101,
-      "colorDefult":"قرمز"
+      "colorDefult":"قرمز",
+       "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"9",
@@ -131,7 +161,13 @@
       "discount":"",
       "type":"تی شرت",
       "popularityScore":560,
-      "colorDefult":"سیاه"
+      "colorDefult":"سیاه",
+       "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"10",
@@ -144,7 +180,19 @@
       "discount":"",
       "type":"تی شرت",
       "popularityScore":188,
-      "colorDefult":"آبی روشن"
+      "colorDefult":"آبی روشن",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ],
+       "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"11",
@@ -157,7 +205,13 @@
       "discount":"",
       "type":"تی شرت",
       "popularityScore":108,
-      "colorDefult":"خاکستری"
+      "colorDefult":"خاکستری",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"12",
@@ -170,7 +224,13 @@
       "discount":"790000",
       "type":"تی شرت",
       "popularityScore":107,
-      "colorDefult":"خاکستری"
+      "colorDefult":"خاکستری",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"13",
@@ -183,7 +243,13 @@
       "discount":"",
       "type":"شلوار جین",
       "popularityScore":106,
-      "colorDefult":"تیره"
+      "colorDefult":"تیره",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"14",
@@ -196,7 +262,13 @@
       "discount":"510000",
       "type":"شلوار جین",
       "popularityScore":1,
-      "colorDefult":"آبی"
+      "colorDefult":"آبی",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"15",
@@ -209,7 +281,13 @@
       "discount":"",
       "type":"لباس شنا",
       "popularityScore":109,
-      "colorDefult":"سیاه"
+      "colorDefult":"سیاه",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"16",
@@ -222,7 +300,13 @@
       "discount":"",
       "type":"لباس شنا",
       "popularityScore":133,
-      "colorDefult":"آبی"
+      "colorDefult":"آبی",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
      {
       "id":"17",
@@ -235,7 +319,13 @@
       "discount":"",
       "type":"لباس شنا",
       "popularityScore":124,
-      "colorDefult":"سبز"
+      "colorDefult":"سبز",
+       "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
       {
       "id":"18",
@@ -248,7 +338,15 @@
       "discount":"",
       "type":"بوت",
       "popularityScore":17,
-      "colorDefult":"سیاه"
+      "colorDefult":"سیاه",
+          "sizes": [
+        { "size": 40, "inStock": true },
+        { "size": 41, "inStock": true },
+        { "size": 42, "inStock": true },
+        { "size": 43, "inStock": false },
+        { "size": 44, "inStock": true },
+        { "size": 45, "inStock": false }
+      ]
     },
       {
       "id":"19",
@@ -261,7 +359,15 @@
       "discount":"",
       "type":"بوت",
       "popularityScore":500,
-      "colorDefult":"قهوه ای"
+      "colorDefult":"قهوه ای",
+          "sizes": [
+        { "size": 40, "inStock": true },
+        { "size": 41, "inStock": true },
+        { "size": 42, "inStock": true },
+        { "size": 43, "inStock": false },
+        { "size": 44, "inStock": true },
+        { "size": 45, "inStock": false }
+      ]
     },
       {
       "id":"21",
@@ -274,7 +380,15 @@
       "discount":"",
       "type":"بوت",
       "popularityScore":105,
-      "colorDefult":"کرم"
+      "colorDefult":"کرم",
+          "sizes": [
+        { "size": 40, "inStock": true },
+        { "size": 41, "inStock": true },
+        { "size": 42, "inStock": true },
+        { "size": 43, "inStock": false },
+        { "size": 44, "inStock": true },
+        { "size": 45, "inStock": false }
+      ]
     },
       {
       "id":"22",
@@ -287,7 +401,15 @@
       "discount":"",
       "type":"بوت",
       "popularityScore":110,
-      "colorDefult":"سبز"
+      "colorDefult":"سبز",
+          "sizes": [
+        { "size": 40, "inStock": true },
+        { "size": 41, "inStock": true },
+        { "size": 42, "inStock": true },
+        { "size": 43, "inStock": false },
+        { "size": 44, "inStock": true },
+        { "size": 45, "inStock": false }
+      ]
     },
       {
       "id":"23",
@@ -300,7 +422,15 @@
       "discount":"",
       "type":"بوت",
       "popularityScore":300,
-       "colorDefult":"سفید"
+       "colorDefult":"سفید",
+          "sizes": [
+        { "size": 40, "inStock": true },
+        { "size": 41, "inStock": true },
+        { "size": 42, "inStock": true },
+        { "size": 43, "inStock": false },
+        { "size": 44, "inStock": true },
+        { "size": 45, "inStock": false }
+      ]
     },
    
       {
@@ -314,7 +444,13 @@
       "discount":"",
       "type":"پیراهن",
       "popularityScore":105,
-       "colorDefult":"سفید"
+       "colorDefult":"سفید",
+         "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
       {
       "id":"26",
@@ -327,7 +463,13 @@
       "discount":"",
       "type":"ورزشی",
       "popularityScore":104,
-      "colorDefult":"خاکستری"
+      "colorDefult":"خاکستری",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
       {
       "id":"27",
@@ -340,7 +482,13 @@
       "discount":"",
       "type":"تی شرت",
       "popularityScore":103,
-      "colorDefult":"سفید"
+      "colorDefult":"سفید",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
       {
       "id":"28",
@@ -353,7 +501,13 @@
       "discount":"",
       "type":"بوت",
       "popularityScore":102,
-      "colorDefult":"سیاه"
+      "colorDefult":"سیاه",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
       {
       "id":"29",
@@ -366,7 +520,13 @@
       "discount":"",
       "type":"پیراهن",
       "popularityScore":101,
-      "colorDefult":"قهوه ای"
+      "colorDefult":"قهوه ای",
+        "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     }
   ],
   "NewArrivals":[
