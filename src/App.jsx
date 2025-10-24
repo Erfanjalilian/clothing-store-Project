@@ -11,6 +11,8 @@ import PaymentMethod from './PaymentMethod'
 import Login from './Login';
 import SignUp from './SignUp';
 import ContactUs from './ContactUs'
+import StorePage from './StorePage';
+
 
 function App() {
 
@@ -29,6 +31,7 @@ function App() {
         <Route path='/ContactUs' element={<ContactUs />} />
          <Route path='/Login' element={<Login />} />
          <Route path='/SignUp' element={<SignUp />} />
+          <Route path='/StorePage' element={<StorePage />} />
       </Routes>
       </BrowserRouter>
     </Box>

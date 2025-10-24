@@ -27,7 +27,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"هودی زنانه",
-      "popularityScore":100
+      "popularityScore":100,
+      "colorDefult":"خاکستری"
     },
       {
       "id":"2",
@@ -39,7 +40,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"هودی زنانه",
-      "popularityScore":333
+      "popularityScore":333,
+      "colorDefult":"آبی"
     },
       {
       "id":"3",
@@ -51,7 +53,20 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"هودی زنانه",
-      "popularityScore":22
+      "popularityScore":22,
+      "colorDefult":"قهوه ای روشن",
+      "variants":[
+        {
+          "color":"قرمز",
+          "Image":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/hoodie_2_front.jpg",
+          "sizes":[
+            {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": false }
+
+          ]
+        }
+      ]
     },
       {
       "id":"4",
@@ -63,19 +78,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"هودی زنانه",
-      "popularityScore":111
-    },
-      {
-      "id":"5",
-      "name":"وو نینجا هودی",
-      "discreaption":"سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع.",
-      "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/hoodie_2_front-300x300.jpg",
-      "price":480000,
-      "brand":"وانت",
-      "Category":"لباس زنانه",
-      "discount":"",
-      "type":"تی شرت",
-      "popularityScore":102
+      "popularityScore":111,
+      "colorDefult":"سیاه"
     },
      {
       "id":"6",
@@ -87,7 +91,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"تی شرت",
-      "popularityScore":10
+      "popularityScore":10,
+      "colorDefult":"سیاه"
     },
      {
       "id":"7",
@@ -99,7 +104,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"تی شرت",
-      "popularityScore":13
+      "popularityScore":13,
+      "colorDefult":"سفید"
     },
      {
       "id":"8",
@@ -111,7 +117,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"تی شرت",
-      "popularityScore":101
+      "popularityScore":101,
+      "colorDefult":"قرمز"
     },
      {
       "id":"9",
@@ -123,7 +130,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"تی شرت",
-      "popularityScore":560
+      "popularityScore":560,
+      "colorDefult":"سیاه"
     },
      {
       "id":"10",
@@ -135,7 +143,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"تی شرت",
-      "popularityScore":188
+      "popularityScore":188,
+      "colorDefult":"آبی روشن"
     },
      {
       "id":"11",
@@ -147,7 +156,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"تی شرت",
-      "popularityScore":108
+      "popularityScore":108,
+      "colorDefult":"خاکستری"
     },
      {
       "id":"12",
@@ -159,31 +169,34 @@
       "Category":"لباس زنانه",
       "discount":"790000",
       "type":"تی شرت",
-      "popularityScore":107
+      "popularityScore":107,
+      "colorDefult":"خاکستری"
     },
      {
       "id":"13",
       "name":"شلوار جین تنگ تیره",
       "discreaption":"سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع.",
-      "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/T_7_front-300x300.jpg",
+      "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/w-jeans-4.jpg",
       "price":760000,
       "brand":"هتلی",
       "Category":"لباس زنانه",
       "discount":"",
-      "type":"تی شرت",
-      "popularityScore":106
+      "type":"شلوار جین",
+      "popularityScore":106,
+      "colorDefult":"تیره"
     },
      {
       "id":"14",
       "name":"شلوار جین درجه یک",
       "discreaption":"سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع.",
-      "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/T_7_front-300x300.jpg",
+      "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/w-jeans-6.jpg",
       "price":640000,
       "brand":"هتلی",
       "Category":"لباس زنانه",
       "discount":"510000",
-      "type":"تی شرت",
-      "popularityScore":1
+      "type":"شلوار جین",
+      "popularityScore":1,
+      "colorDefult":"آبی"
     },
      {
       "id":"15",
@@ -195,7 +208,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"لباس شنا",
-      "popularityScore":109
+      "popularityScore":109,
+      "colorDefult":"سیاه"
     },
      {
       "id":"16",
@@ -207,7 +221,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"لباس شنا",
-      "popularityScore":133
+      "popularityScore":133,
+      "colorDefult":"آبی"
     },
      {
       "id":"17",
@@ -219,7 +234,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"لباس شنا",
-      "popularityScore":124
+      "popularityScore":124,
+      "colorDefult":"سبز"
     },
       {
       "id":"18",
@@ -231,7 +247,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"بوت",
-      "popularityScore":17
+      "popularityScore":17,
+      "colorDefult":"سیاه"
     },
       {
       "id":"19",
@@ -243,7 +260,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"بوت",
-      "popularityScore":500
+      "popularityScore":500,
+      "colorDefult":"قهوه ای"
     },
       {
       "id":"21",
@@ -255,7 +273,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"بوت",
-      "popularityScore":105
+      "popularityScore":105,
+      "colorDefult":"کرم"
     },
       {
       "id":"22",
@@ -267,7 +286,8 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"بوت",
-      "popularityScore":110
+      "popularityScore":110,
+      "colorDefult":"سبز"
     },
       {
       "id":"23",
@@ -279,23 +299,13 @@
       "Category":"لباس زنانه",
       "discount":"",
       "type":"بوت",
-      "popularityScore":300
+      "popularityScore":300,
+       "colorDefult":"سفید"
     },
-      {
-      "id":"24",
-      "name":"مایو دو تیکه سبک",
-      "discreaption":"سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع.",
-      "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/hoodie_4_front.jpg",
-      "price":1920000,
-      "brand":"کلانکر",
-      "Category":"لباس زنانه",
-      "discount":"",
-      "type":"بوت",
-      "popularityScore":200
-    },
+   
       {
       "id":"25",
-      "name":"مایو دو تیکه سبک",
+      "name":"پیراهن سوئیت تجاری",
       "discreaption":"سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع.",
       "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/men-shirt-3.jpg",
       "price":1920000,
@@ -303,11 +313,12 @@
       "Category":"لباس مردانه",
       "discount":"",
       "type":"پیراهن",
-      "popularityScore":105
+      "popularityScore":105,
+       "colorDefult":"سفید"
     },
       {
       "id":"26",
-      "name":"مایو دو تیکه سبک",
+      "name":"پیراهن شطرنجی",
       "discreaption":"سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع.",
       "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/men-shirt-2.jpg",
       "price":1920000,
@@ -315,23 +326,25 @@
       "Category":"لباس مردانه",
       "discount":"",
       "type":"ورزشی",
-      "popularityScore":104
+      "popularityScore":104,
+      "colorDefult":"خاکستری"
     },
       {
       "id":"27",
-      "name":"مایو دو تیکه سبک",
+      "name":"پیراهن کلاسیک",
       "discreaption":"سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع.",
-      "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/men-shirt-1-2.jpg",
+      "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/men-shirt-1.jpg",
       "price":1920000,
       "brand":"کلانکر",
       "Category":"لباس مردانه",
       "discount":"",
       "type":"تی شرت",
-      "popularityScore":103
+      "popularityScore":103,
+      "colorDefult":"سفید"
     },
       {
       "id":"28",
-      "name":"مایو دو تیکه سبک",
+      "name":"چکمه زمین ناهموار",
       "discreaption":"سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع.",
       "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/men-shirt-3.jpg",
       "price":1920000,
@@ -339,11 +352,12 @@
       "Category":"لباس مردانه",
       "discount":"",
       "type":"بوت",
-      "popularityScore":102
+      "popularityScore":102,
+      "colorDefult":"سیاه"
     },
       {
       "id":"29",
-      "name":"مایو دو تیکه سبک",
+      "name":"چکمه های چرمی گرم",
       "discreaption":"سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع.",
       "ImageAdress":"https://vip-themes.com/impreza/15/wp-content/uploads/2020/11/hoodie_3_front-300x300.jpg",
       "price":1920000,
@@ -351,7 +365,8 @@
       "Category":"لباس مردانه",
       "discount":"",
       "type":"پیراهن",
-      "popularityScore":101
+      "popularityScore":101,
+      "colorDefult":"قهوه ای"
     }
   ],
   "NewArrivals":[

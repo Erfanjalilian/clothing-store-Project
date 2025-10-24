@@ -1,7 +1,11 @@
 import { Box,Typography,Container } from "@mui/material"
-import { useEffect,useState } from "react";
+import { useEffect,useState,useContext } from "react";
+import {dataStore} from '../context/Store'
+import { useNavigate } from "react-router-dom";
 function WomanClothes(){
+    const{setData}=useContext(dataStore)
       const[typeProducte,setTypeProducte]=useState([])
+      const navigate = useNavigate();
     useEffect(()=>{
         async function fetchData(){
             const result=await fetch("http://localhost:3000/product")
@@ -13,6 +17,10 @@ function WomanClothes(){
         }
         fetchData()
     },[])
+    function handelDataContext(item){
+        setData(item)
+        navigate("/StorePage");
+    }
     return(
         <Box sx={{
             position:"absolute",
@@ -36,7 +44,11 @@ function WomanClothes(){
                             typeProducte.map((item)=>(
                                 <Box key={item} sx={{
                                     width:"100%"
-                                }}>{item}</Box>
+                                }}>
+                                    <Typography sx={{
+                                        cursor:"pointer"
+                                    }} onClick={()=>handelDataContext(item)}>{item}</Typography>
+                                </Box>
                             ))
                         }
                     </Box>
