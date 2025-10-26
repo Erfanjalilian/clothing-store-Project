@@ -13,7 +13,7 @@ function Footer() {
       }}
     >
       <Container maxWidth="lg">
-        {/* بخش بالا (آیکون‌ها و توضیحات کوتاه) */}
+       
         <Box
           sx={{
             display: "flex",
@@ -91,7 +91,7 @@ function Footer() {
           ))}
         </Box>
 
-        {/* بخش لینک‌ها */}
+       
         <Box
           sx={{
             display: "flex",
@@ -161,7 +161,7 @@ function Footer() {
         </Box>
       </Container>
 
-      {/* کپی‌رایت */}
+    
       <Typography
         sx={{
           color: "gray",
