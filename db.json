@@ -28,7 +28,13 @@
       "discount":"",
       "type":"هودی زنانه",
       "popularityScore":100,
-      "colorDefult":"خاکستری"
+      "colorDefult":"خاکستری",
+      "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
       {
       "id":"2",
@@ -41,7 +47,13 @@
       "discount":"",
       "type":"هودی زنانه",
       "popularityScore":333,
-      "colorDefult":"آبی"
+      "colorDefult":"آبی",
+      "defultSize":[
+          {"size": "S", "inStock": true },
+            {"size": "M", "inStock": true },
+            { "size": "L", "inStock": true }
+
+      ]
     },
       {
       "id":"3",

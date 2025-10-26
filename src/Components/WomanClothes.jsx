@@ -17,6 +17,7 @@ function WomanClothes(){
         }
         fetchData()
     },[])
+    
     function handelDataContext(item){
         setData(item)
         navigate("/StorePage");

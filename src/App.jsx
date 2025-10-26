@@ -11,7 +11,7 @@ import PaymentMethod from './PaymentMethod'
 import Login from './Login';
 import SignUp from './SignUp';
 import ContactUs from './ContactUs'
-import StorePage from './StorePage';
+import StorePage from './StorePage/StorePage';
 
 
 function App() {
